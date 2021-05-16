@@ -14,7 +14,7 @@ import os
 # specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
 
 # def cam=0 , webcam=2
-video_capture = cv2.VideoCapture(2)
+video_capture = cv2.VideoCapture(0)
 
 
 def get_encoded_names():
@@ -74,6 +74,7 @@ while True:
                 name = known_face_names[best_match_index]
 
             face_names.append(name)
+            print(name)
 
     process_this_frame = not process_this_frame
 
