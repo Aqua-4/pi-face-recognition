@@ -35,6 +35,7 @@ known_face_names, known_face_encodings = get_encoded_names()
 face_locations = []
 face_encodings = []
 face_names = []
+recent_person = ""
 process_this_frame = True
 
 while True:
@@ -74,7 +75,9 @@ while True:
                 name = known_face_names[best_match_index]
 
             face_names.append(name)
-            print(name)
+            if name != recent_person:
+                recent_person = name
+                print(recent_person)
 
     process_this_frame = not process_this_frame
 
